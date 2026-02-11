@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Staff Table</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-title">My Profile</span>
+      </a>
+  
+
+      <nav class="nav">
+        <a href="index.html">Profile</a>
+        <a href="grade.html"> Grade</a>
+        <a class="active" href="staff.html">Staff</a>
+        <a href="temperature.html">Temperature</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Staff Table</h2>
+      <p class="help">
+        Use the buttons to sort staff members by <b>name</b> or <b>salary</b>.
+        Sorting toggles between ascending and descending order.
+      </p>
+  
+      <div class="actions">
+        <button class="btn btn-primary" id="sortNameBtn" type="button">
+          Sort by Name (A → Z)
+        </button>
+  
+        <button class="btn btn-ghost" id="sortSalaryBtn" type="button">
+          Sort by Salary (Low → High)
+        </button>
+      </div>
+  
+      <div style="height: 16px;"></div>
+  
+      <div class="table-wrapper">
+        <table class="staff-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody id="staffTableBody">
+            <!-- Rows injected by JavaScript “The table body is empty in HTML. JavaScript reads the staff array and dynamically creates table rows, then appends them to the DOM.”-->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  
+
+     <!-- FOOTER -->
+     <footer class="site-footer">
+      <div class="footer-pill">
+        <span>Anastasiia Filippova</span>
+        <span>©</span>
+        <span id="year"></span>
+        <span>•</span>
+        <span id="today"></span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/staff.js"></script>
+</body>
+</html>

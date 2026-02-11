@@ -1,0 +1,249 @@
+
+
+:root {
+  --pink: #ffd6e6;
+  --mint: #d7f5ee;
+  --border: #f2d8e4;
+  --text: #2b2a2f;
+  --muted: #6b6670;
+  --white: #ffffff;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: #fff7fb;
+}
+
+/* Layout */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Header + Nav */
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 13px;
+  padding: 8px 12px;
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+}
+
+.nav a.active {
+  background: var(--mint);
+  border-color: #9adccc;
+}
+
+/* Main */
+main {
+  padding-top: 18px;
+}
+
+/* Hero */
+.hero {
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+}
+
+.hero h1 {
+  margin-top: 0;
+}
+
+.hero p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.title::after {
+  content: " 🐑";
+}
+
+/* Small card inside hero */
+.hero-card {
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  background: #fff;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 2px solid var(--border);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--pink);
+}
+
+.btn-ghost {
+  background: var(--mint);
+}
+
+/* Centered content card (Grade / Temperature / Staff) */
+.section {
+  max-width: 520px;
+  margin: 30px auto;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+/* Forms */
+.form {
+  display: grid;
+  gap: 10px;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  background: #fff;
+}
+
+.help {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Notice boxes */
+.notice {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff0f6;
+  font-weight: bold;
+}
+
+/* Delayed image */
+.delayed-image {
+  display: none;
+  width: 100%;
+  border-radius: 14px;
+  border: 2px solid var(--border);
+}
+
+/* Staff table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.staff-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.staff-table thead {
+  background: var(--mint);
+}
+
+.staff-table th,
+.staff-table td {
+  padding: 12px;
+  text-align: left;
+  border-top: 2px solid var(--border);
+}
+
+.staff-table th {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.staff-table td:last-child {
+  text-align: right;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 24px;
+  padding: 18px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.footer-pill {
+  display: inline-flex;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+}
