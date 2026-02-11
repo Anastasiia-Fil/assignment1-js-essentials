@@ -1,0 +1,5 @@
+GitHub Repository:
+https://github.com/Anastasiia-Fil/assignment1-js-essentials
+
+GitHub Pages:
+https://Anastasiia-Fil.github.io/assignment1-js-essentials/
